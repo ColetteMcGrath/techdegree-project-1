@@ -23,31 +23,31 @@ var quotes = [
     year: "1994"
   },
   {
-    quote:"",
-    source:"",
-    citation:"",
-    year:""
+    quote:"I don't have friends. I got family",
+    source:"Dominic Toretto",
+    citation:"Furious 7",
+    year:"2015"
   },
   {
-    quote:"",
-    source:"",
-    citation:"",
-    year:""
+    quote:"Ye best start believin' in ghost stories, Miss Turner. Yer in one.",
+    source:"Captain Barbossa",
+    citation:"Pirates of the Caribbean: The Curse of the Black Pearl",
+    year:"2003"
   },
   {
-    quote:"",
-    source:"",
-    citation:"",
-    year:""
+    quote:"For a guy with a four digit IQ, I must have missed something.",
+    source:"Eddie Morra",
+    citation:"Limitless",
+    year:"2011"
   },
   {
-    quote:"",
-    source:"",
-    citation:"",
-    year:""
+    quote:"I have to return some videotapes.",
+    source:"Patrick Bateman",
+    citation:"American Psycho",
+    year:"2000"
   }
 ];
-
+console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
