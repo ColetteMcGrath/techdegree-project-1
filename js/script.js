@@ -7,12 +7,7 @@ project 1 - A Random Quote Generator
 
 
 /***
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
+  Quote array variable below. I included 'citation', and 'year' with each
 ***/
 
 var quotes = [
@@ -47,16 +42,24 @@ var quotes = [
     year:"2000"
   }
 ];
-console.log(quotes);
+
+// console.log(quotes); //
+// To test array //
 
 /***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+This function takes the elements from the quotes array and chooses one at random
+randomQuote creates the random number used to select the element
+return is used to makes sure the element will be visible later
 ***/
 
+function getRandomQuote()
+{
+  var randomQuote = quotes[Math.floor(Math.random()*quotes.length)];
+  return randomQuote;
+}
 
-
+// console.log(getRandomQuote()); //
+// To test getRandomQuote function //
 
 /***
   Create the `printQuote` function to:
@@ -73,12 +76,9 @@ console.log(quotes);
 
 
 
-
 /***
-  When the "Show another quote" button is clicked, the event listener
-  below will be triggered, and it will call, or "invoke", the `printQuote`
-  function. So do not make any changes to the line of code below this
-  comment.
+  DO NOT TOUCH!! This is an event listener that calls the 'printQuote' function.
+  It was provided with the Unit 1 project files.
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
