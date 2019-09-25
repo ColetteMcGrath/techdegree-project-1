@@ -32,24 +32,21 @@ var quotes = [
   {
     quote:"For a guy with a four digit IQ, I must have missed something.",
     source:"Eddie Morra",
-    citation:"Limitless",
-    year:"2011"
+    citation:"Limitless"
   },
   {
     quote:"I have to return some videotapes.",
     source:"Patrick Bateman",
-    citation:"American Psycho",
     year:"2000"
   }
 ];
 
 // console.log(quotes); //
-// To test array //
+//Above can be used to test array //
 
 /***
 This function takes the elements from the quotes array and chooses one at random
 randomQuote creates the random number used to select the element
-return is used to makes sure the element will be visible later
 ***/
 
 function getRandomQuote()
@@ -59,8 +56,7 @@ function getRandomQuote()
 }
 
 // console.log(getRandomQuote()); //
-// To test getRandomQuote function //
-
+//Above can be used to test getRandomQuote function //
 /***
   Create the `printQuote` function to:
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -74,14 +70,33 @@ function getRandomQuote()
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
+function printQuote ()
+{
+  var quoteChoice = getRandomQuote();
 
+  var html = '';
+  html += '<p class = "quote">'+ quoteChoice.quote + '</p>';
+  html += '<p class = "source">' + quoteChoice.source;
 
+  if(quoteChoice.citation)
+  {
+    html += '<span class = "citation">' + quoteChoice.citation + '</span>';
+  }
+  if(quoteChoice.year)
+  {
+    html += '<span class = "year">' + quoteChoice.year + '</span>';
+  }
+
+html += '</p>';
+
+document.getElementById('quote-box').innerHTML= html;
+
+  return html;
+}
+console.log(printQuote());
 /***
   DO NOT TOUCH!! This is an event listener that calls the 'printQuote' function.
   It was provided with the Unit 1 project files.
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
