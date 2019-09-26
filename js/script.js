@@ -7,7 +7,7 @@ project 1 - A Random Quote Generator
 
 
 /***
-  Quote array variable below. I included 'citation', and 'year' with each
+  Quote array variable below
 ***/
 
 var quotes = [
@@ -41,8 +41,8 @@ var quotes = [
   }
 ];
 
-// console.log(quotes); //
-//Above can be used to test array //
+// console.log(quotes);
+//Above can be used to test array
 
 /***
 This function takes the elements from the quotes array and chooses one at random
@@ -55,8 +55,8 @@ function getRandomQuote()
   return randomQuote;
 }
 
-// console.log(getRandomQuote()); //
-//Above can be used to test getRandomQuote function //
+// console.log(getRandomQuote());
+//Above can be used to test getRandomQuote function
 /***
 printQuote function to output the randomQuote generated above
 ***/
@@ -84,6 +84,8 @@ document.getElementById('quote-box').innerHTML= html;
 
   return html;
 }
+
+
 console.log(printQuote());
 /***
   DO NOT TOUCH!! This is an event listener that calls the 'printQuote' function.
